@@ -1,9 +1,9 @@
-# Prasunet_ML_01
+# PRODIGY_ML_01
+Prodigy Machine Learning Internship Task 1
 
-Implement a linear regression model to predict the prices of houses based on their square footage and the number of bedrooms and bathrooms.
+Implementing a linear regression model to predict the prices of houses based on their square footage and the number of bedrooms and bathrooms
 
-Sample Dataset :-
-https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data
+Dataset link: https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data
 
 ## 1. Data Preparation
 
