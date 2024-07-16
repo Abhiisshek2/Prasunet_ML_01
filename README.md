@@ -5,37 +5,31 @@ Implement a linear regression model to predict the prices of houses based on the
 Sample Dataset :-
 https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data
 
-## **Libraries used:-**
-* pandas: Data manipulation
-* numpy: Numerical operations
-* matplotlib.pyplot: Plotting on graph
-* sklearn: Linear modelling of dataset
-* scipy: Skew calculations
+## 1. Data Preparation
 
-## **Column used for Training and Testing:-**
-* LotArea
-* BedroomAbvGr
-* BsmtFullBath
-* BsmtHalfBath
-* HalfBath
-* TotalBsmtSF
-* FullBath
+- using pandas to read csv and view dataset shape and columns
+- create new dataset using relevant features and target variable for the present task
 
-## **Data Split:-**
-* The target variable, 'SalePrice', undergoes a logarithmic transformation using np.log1p(). This is done to handle potential skewness in the target variable and to make the predictions more interpretable.
-* The training set is split into features (X) and the target variable (y).
-* Further, the data is split into training and testing subsets using train_test_split(). This function randomly splits the data into training and testing sets, typically in a 2:1 ratio in this case, with 33% of the data reserved for testing. The random state is set to ensure reproducibility.
+## 2. Data Visualization
 
-## **Feature Scaling:-**
-* Standard scaling is applied to the feature variables using StandardScaler(). This ensures that all features have a mean of 0 and a standard deviation of 1, which helps in improving the performance of many machine learning algorithms.
+- check datatypes in case there is need for encoding categorical values
+- check for missing values and duplicate rows
+- check correlation coefficient of features to the target variable using seaborn
+- create new dataset using highly correlated features
 
-## **Missing Value Imputation:-**
-* Missing values in the test set are imputed using the mean strategy (strategy='mean') through SimpleImputer(). The mean values are calculated from the training data and used to fill in missing values in both the training and testing sets.
+## 3. Model Training
 
-## **Model Training:-**
-* A Ridge regression model is trained using the training data. Ridge regression is a linear regression model with a regularization term, which helps in reducing overfitting. The regularization strength (alpha) is set to 1.0, but it can be tuned for optimal performance.
+- split data into training and test sets using scikit-learn
+- create linear regression model from the data
+- check model summary (coefficients and r-squared value)
 
-## **Model Evaluation:-**
-* The trained model is used to make predictions on the testing set.
-* Mean Squared Error (MSE) is calculated to evaluate the performance of the model. MSE measures the average squared difference between the predicted values and the actual values.
+## 4. Model Evaluation
+
+- use the model to create predictions
+- compare predictions to test set values using matplotlib
+- use r2_score from scikit-learn to check model accuracy
+
+## 5. Model Explanation
+
+- explanation for model's predictions and accuracy
 
